@@ -9094,11 +9094,12 @@ textarea.form-control {
 .ftco-bg-dark {
   background: #3c312e; }
 
-.ftco-footer {
-  font-size: 16px;
-  background: #000000;
-  padding: 7em 0;
-  z-index: 0; }
+  .ftco-footer {
+    padding: 10px 0; /* Reduce top and bottom padding */
+    font-size: 12px;  /* Make text smaller */
+    background: black; /* Keep it consistent with your theme */
+    color: #ffbd39; /* Match yellow theme */
+  }
   .ftco-footer .ftco-footer-logo {
     text-transform: uppercase;
     letter-spacing: .1em; }
