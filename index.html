@@ -98,6 +98,7 @@
 }
 
 
+
 /* project image zoom effect */
 
 .zoom-effect {
@@ -109,12 +110,24 @@
   transform: scale(1.1);
 }
 
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: black;
+}
+
+
+
 
 </style>
 
 
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<div id="particles-js"></div>
+
 	  
 	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
@@ -780,6 +793,50 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+	particlesJS("particles-js", {
+	  particles: {
+		number: { value: 100, density: { enable: true, value_area: 800 } },
+		color: { value: "#ffbd39" }, // Yellow particles
+		shape: { type: "circle" },
+		opacity: { value: 0.9 },
+		size: { value: 3, random: true },
+		move: { 
+		  enable: true,
+		  speed: 3, 
+		  direction: "none",
+		  out_mode: "out"
+		},
+		line_linked: {
+		  enable: true,
+		  distance: 150,
+		  color: "#ffbd39", // Yellow connecting lines
+		  opacity: 0.6,
+		  width: 1
+		}
+	  },
+	  interactivity: {
+		detect_on: "canvas",
+		events: {
+		  onhover: { enable: true, mode: "attract" }, // Pulls particles towards cursor
+		  onclick: { enable: true, mode: "push" }, // Clicking adds particles
+		  resize: true
+		},
+		modes: {
+		  attract: { distance: 200, duration: 0.5, speed: 1.2 }, // Strong pull effect
+		  push: { particles_nb: 4 }
+		}
+	  },
+	  retina_detect: true
+	});
+  </script>
+  
+
+  
     
-  </body>
+</body>
 </html>
